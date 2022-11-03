@@ -1,11 +1,20 @@
 import './App.css';
-import NavbarComponent from './component/NavbarComponent';
-
+import {Row, Col, Container} from 'react-bootstrap'
+import {Hasil, NavbarComponent, ListCategories} from './component';
 function App() {
   return (
     <div className="App">
       <NavbarComponent/>
-      <h2>Aloha</h2>
+      <Container fluid mt="3">
+        <Row>
+          <ListCategories/>
+          <Col>
+            <h5><strong>Daftar Produk</strong></h5>
+            <hr/>
+          </Col>
+          <Hasil/>
+        </Row>
+      </Container>
     </div>
   );
 }
