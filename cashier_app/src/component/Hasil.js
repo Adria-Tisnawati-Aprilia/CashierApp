@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Col, ListGroup, Row } from 'react-bootstrap'
+import { Col, ListGroup, Row, Badge } from 'react-bootstrap'
+import {numberWithCommas} from './utils';
 
 export default class ListCategories extends Component {
     render() {
@@ -31,10 +32,10 @@ export default class ListCategories extends Component {
                                 </Col>
                             </Row>
                         </ListGroup.Item>
+                    ))}
                 </ListGroup>
-                    ))};
             }
         </Col>
         )
-    }
-}
+    };
+};
