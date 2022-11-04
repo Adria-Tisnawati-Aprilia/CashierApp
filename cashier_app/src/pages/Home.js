@@ -130,10 +130,10 @@ const {menus, categoryYangDipilih, keranjangs} = this.state;
         <Container fluid mt="3">
         <Row>
             <ListCategories changeCategory= {this.changeCategory} categoryYangDipilih = {categoryYangDipilih} />
-            <Col>
+            <Col className="mt-3">
             <h5><strong>Daftar Produk</strong></h5>
             <hr/>
-            <Row>
+            <Row className="overflow-auto menu">
                 {menus && menus.map((menu)=> (
                 <Menus 
                     key={menu.id}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, ListGroup, Row, Badge } from 'react-bootstrap'
+import { Col, ListGroup, Row, Badge, Card } from 'react-bootstrap'
 import TotalBayar from './TotalBayar';
 import {numberWithCommas} from '../utils/utils';
 import ModalKeranjang from './ModalKeranjang'
@@ -110,15 +110,16 @@ export default class ListCategories extends Component {
     render() {
     const {keranjangs} = this.props
         return (
-        <Col md={3} mt="4">
+        <Col md={3} className="mt-3">
             <h5> 
                 <strong>Hasil</strong>
             </h5>
             <hr/>
             {keranjangs.length !== 0 &&
+                <Card className="overflow-auto hasil">
                 <ListGroup variant="flush">
                     {keranjangs.map((menuKeranjang) => (
-                        <ListGroup.Item key= {menuKeranjang.id} onClick={() => this.handleShow(menuKeranjang)} >
+                            <ListGroup.Item key= {menuKeranjang.id} onClick={() => this.handleShow(menuKeranjang)} >
                             <Row>
                                 <Col xs={2}>
                                     <h7>
@@ -147,6 +148,7 @@ export default class ListCategories extends Component {
                     hapusPesanan={this.hapusPesanan}/>
                     
                 </ListGroup>
+                </Card>
             }
             
             <TotalBayar keranjangs={keranjangs} {...this.props} />
