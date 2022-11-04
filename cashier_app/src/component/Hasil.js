@@ -74,6 +74,7 @@ export default class ListCategories extends Component {
         axios
             .put(API_URL + "keranjangs/" + this.state.keranjangDetail.id, data)
             .then((res) => {
+                this.props.getListKeranjang();
                 swal({
                 title: "Update Pesanan!",
                 text: "Sukses Update Pesanan" + data.product.nama,
@@ -94,6 +95,7 @@ export default class ListCategories extends Component {
         axios
             .delete(API_URL + "keranjangs/" + id)
             .then((res) => {
+                this.props.getListKeranjang();
                 swal({
                 title: "Hapus Pesanan!",
                 text: "Sukses Hapus Pesanan" + this.state.keranjangDetail.product.nama,
