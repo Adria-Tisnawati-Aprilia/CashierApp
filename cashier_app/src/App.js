@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import {
   BrowserRouter,
   Switch,
-  Route,
-
+  Route
 } from "react-router-dom";
 import {NavbarComponent} from './component'
 import {Home, Sukses} from './pages'

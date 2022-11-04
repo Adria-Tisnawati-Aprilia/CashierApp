@@ -1,4 +1,3 @@
-import './App.css';
 import {Row, Col, Container} from 'react-bootstrap'
 import {Hasil, ListCategories, Menus} from '../component';
 import axios from 'axios';

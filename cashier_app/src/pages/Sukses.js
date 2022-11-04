@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {Button, Image} from 'raect-bootstrap';
+import {Button, Image} from 'react-bootstrap';
 import axios from 'axios';
 import {API_URL} from '../utils/constant';
 
